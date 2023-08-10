@@ -24,6 +24,7 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
 .stars {
@@ -39,23 +40,14 @@ body {
 
 .clouds {
   z-index: 1;
-  pointer-events: none;
-  /* This prevents the clouds from capturing mouse events */
-
-  /* Use multiple background images for variation */
   background: transparent url("../../assets/images/background_3.png") repeat top center;
   background-size: auto;
   animation: move-clouds-back 100s linear infinite;
-  /* Additional random movement */
   opacity: 0.85;
 }
 
-/* .hero .clouds:first-child{
-} */
-
 .hero .clouds:last-child {
   animation: move-clouds-back2 80s cubic-bezier(.46, .03, .52, .96) infinite
-    /* Additional random movement */
 }
 
 @keyframes move-clouds-back {
@@ -65,7 +57,6 @@ body {
 
   to {
     background-position: -10000px 0;
-    /* Adjust this value based on your image size */
   }
 }
 
@@ -76,7 +67,6 @@ body {
 
   to {
     background-position: -10000px 0;
-    /* Adjust this value based on your image size */
   }
 }
 
@@ -139,27 +129,43 @@ section.hero {
 }
 
 main {
+  width: 100vw;
   position: relative;
   background-color: transparent;
   z-index: 3;
   color: white;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+
+.sec-gap{
+  width: auto;
+  height: 100vw;
 }
 
 .sec-con {
+  width: 90vw;
+  min-width: 90%;
+  position: relative;
   background: rgba(0, 0, 0, 0.09);
   border-radius: 16px;
   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
-  backdrop-filter: blur(4.2px);
-  -webkit-backdrop-filter: blur(4.2px);
+  backdrop-filter: saturate(100%) blur(4.2px);
+  -webkit-backdrop-filter: saturate(180%) blur(4.2px);
   /* border: 1px solid rgba(255, 255, 255, 0.02); */
   padding:10px;
+  outline: 15px solid hsla(0, 49%, 10%, 0.04);
+  outline-offset: -7.5px;
+  overflow-x: hidden;
 }
 
-section.about {
+.about {
   font-size: 40px;
   height: 100vh;
-  /* width: 100vw; */
 }
 
 @media (max-width: 420px) {
@@ -172,7 +178,6 @@ section.about {
 
   .clouds {
     animation: move-clouds-back 10s linear alternate-reverse;
-    /* Additional random movement */
   }
 
   @keyframes move-clouds-back {
@@ -182,7 +187,6 @@ section.about {
 
     to {
       background-position: -500px 0;
-      /* Adjust this value based on your image size */
     }
   }
 }
