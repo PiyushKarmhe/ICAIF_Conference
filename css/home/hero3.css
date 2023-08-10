@@ -181,6 +181,7 @@ main {
 
   .clouds {
     animation: move-clouds-back 10s linear alternate-reverse;
+    background-size: cover;
   }
 
   @keyframes move-clouds-back {
@@ -192,4 +193,17 @@ main {
       background-position: -500px 0;
     }
   }
+
+  .hero-banner {
+    z-index: 1;
+  }
+
+  .hero-banner__image {
+    transform: rotate(-15deg) scale(0.7);
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+    /* top :  21.4167px;
+    right :  389px; */
+
+  }
+
 }
