@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Hero Animation*/
+.stars,
+.twinkling,
+.clouds {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stars {
+  z-index: 0;
+  background: transparent url("../../assets/images/background_1.png") repeat top center;
+}
+
+.twinkling {
+  z-index: 0;
+  background: transparent url("../../assets/images/background_2.png") repeat top center;
+  animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+  z-index: 1;
+  background: transparent url("../../assets/images/background_3.png") repeat top center;
+  animation: move-clouds-back 100s linear infinite;
+}
+
+@keyframes move-twink-back {
+  from {
+      background-position: 0 0;
+  }
+
+  to {
+      background-position: -10000px 5000px;
+  }
+}
+
+@keyframes move-clouds-back {
+  from {
+      background-position: 0 0;
+  }
+
+  to {
+      background-position: 10000px 0;
+  }
+}
+
+.hero-banner {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .hero-banner__title {
+    color: #fff;
+    font-size: 15rem;
+    font-weight: 700;
+    padding: 0 20px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .hero-banner__stroked-title {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-stroke: 2px white;
+  }
+  
+  .hero-banner__image {
+    border-radius: 20px;
+    position: fixed;
+    transform: rotate(-15deg);
+    width: 450px;
+  }
+  
+  .content {
+    background-color: #eaeaea;
+    font-size: 40px;
+    padding: 120px 80px;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  body {
+    background-color: #000;
+    font-family: Arial;
+  }
+  
+  
+
+
+
+
+
