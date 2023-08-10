@@ -39,9 +39,40 @@ body {
 
 .clouds {
   z-index: 1;
+  pointer-events: none; /* This prevents the clouds from capturing mouse events */
+
+  /* Use multiple background images for variation */
   background: transparent url("../../assets/images/background_3.png") repeat top center;
-  animation: move-clouds-back 100s linear infinite;
+  background-size: auto;
+  animation: move-clouds-back 100s linear infinite; /* Additional random movement */
+  opacity: 0.65;
 }
+
+/* .hero .clouds:first-child{
+} */
+
+.hero .clouds:last-child{
+  animation:move-clouds-back2 80s cubic-bezier(.46,.03,.52,.96) infinite /* Additional random movement */
+}
+
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 0; /* Adjust this value based on your image size */
+  }
+}
+
+@keyframes move-clouds-back2 {
+  from {
+    background-position: 500px 0;
+  }
+  to {
+    background-position: -10000px 0; /* Adjust this value based on your image size */
+  }
+}
+
 
 @keyframes move-twink-back {
   from {
@@ -116,3 +147,24 @@ section.about{
   width: 100vw;
 }
 
+@media (max-width: 420px) {
+
+  .hero-banner__title {
+    font-size: 7rem;
+    font-weight: 700;
+    padding: 0 20px;
+  }
+
+  .clouds {
+    animation: move-clouds-back 10s linear alternate-reverse; /* Additional random movement */
+  }
+  
+  @keyframes move-clouds-back {
+    from {
+      background-position: 2000 0;
+    }
+    to {
+      background-position: -500px 0; /* Adjust this value based on your image size */
+    }
+  }
+}
