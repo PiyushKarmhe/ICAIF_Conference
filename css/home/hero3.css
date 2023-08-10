@@ -39,28 +39,33 @@ body {
 
 .clouds {
   z-index: 1;
-  pointer-events: none; /* This prevents the clouds from capturing mouse events */
+  pointer-events: none;
+  /* This prevents the clouds from capturing mouse events */
 
   /* Use multiple background images for variation */
   background: transparent url("../../assets/images/background_3.png") repeat top center;
   background-size: auto;
-  animation: move-clouds-back 100s linear infinite; /* Additional random movement */
+  animation: move-clouds-back 100s linear infinite;
+  /* Additional random movement */
   opacity: 0.85;
 }
 
 /* .hero .clouds:first-child{
 } */
 
-.hero .clouds:last-child{
-  animation:move-clouds-back2 80s cubic-bezier(.46,.03,.52,.96) infinite /* Additional random movement */
+.hero .clouds:last-child {
+  animation: move-clouds-back2 80s cubic-bezier(.46, .03, .52, .96) infinite
+    /* Additional random movement */
 }
 
 @keyframes move-clouds-back {
   from {
     background-position: 0 0;
   }
+
   to {
-    background-position: -10000px 0; /* Adjust this value based on your image size */
+    background-position: -10000px 0;
+    /* Adjust this value based on your image size */
   }
 }
 
@@ -68,8 +73,10 @@ body {
   from {
     background-position: 500px 0;
   }
+
   to {
-    background-position: -10000px 0; /* Adjust this value based on your image size */
+    background-position: -10000px 0;
+    /* Adjust this value based on your image size */
   }
 }
 
@@ -128,23 +135,31 @@ body {
 }
 
 section.hero {
-  /* position: fixed; */
-  top:0px;
-  /* z-index: -1; */
+  top: 0px;
 }
 
 main {
   position: relative;
   background-color: transparent;
   z-index: 3;
-  color:white
+  color: white;
+  padding: 50px;
 }
 
-section.about{
+.sec-con {
+  background: rgba(0, 0, 0, 0.09);
+  border-radius: 16px;
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  /* border: 1px solid rgba(255, 255, 255, 0.02); */
+  padding:10px;
+}
+
+section.about {
   font-size: 40px;
-  padding: 120px 80px;
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 @media (max-width: 420px) {
@@ -156,15 +171,18 @@ section.about{
   }
 
   .clouds {
-    animation: move-clouds-back 10s linear alternate-reverse; /* Additional random movement */
+    animation: move-clouds-back 10s linear alternate-reverse;
+    /* Additional random movement */
   }
-  
+
   @keyframes move-clouds-back {
     from {
       background-position: 2000 0;
     }
+
     to {
-      background-position: -500px 0; /* Adjust this value based on your image size */
+      background-position: -500px 0;
+      /* Adjust this value based on your image size */
     }
   }
 }
