@@ -97,7 +97,7 @@ body {
   height: 100vh;
   position: relative;
   justify-content: center;
-  z-index: 1;
+  z-index: 5;
   overflow-x: hidden;
 }
 
@@ -122,6 +122,9 @@ body {
   position: fixed;
   transform: rotate(-15deg);
   width: 450px;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+  /* top :  21.4167px;
+  right :  389px; */
 }
 
 section.hero {
@@ -144,7 +147,7 @@ main {
 
 .sec-gap{
   width: auto;
-  height: 100vw;
+  height: 70vh;
 }
 
 .sec-con {
