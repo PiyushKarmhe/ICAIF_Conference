@@ -1,15 +1,22 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+
+body {
+  background-color: #000;
+  font-family: Arial;
+  width: 100vw;
+  overflow-x: hidden;
+}
 
 /* Hero Animation*/
 .stars,
 .twinkling,
 .clouds {
-  position: absolute;
+  position: fixed;
   display: block;
   top: 0;
   bottom: 0;
@@ -38,74 +45,74 @@
 
 @keyframes move-twink-back {
   from {
-      background-position: 0 0;
+    background-position: 0 0;
   }
 
   to {
-      background-position: -10000px 5000px;
+    background-position: -10000px 5000px;
   }
 }
 
 @keyframes move-clouds-back {
   from {
-      background-position: 0 0;
+    background-position: 0 0;
   }
 
   to {
-      background-position: 10000px 0;
+    background-position: 10000px 0;
   }
 }
 
 .hero-banner {
-    align-items: center;
-    display: flex;
-    height: 100vh;
-    position: relative;
-    justify-content: center;
-    z-index: 1;
-  }
-  
-  .hero-banner__title {
-    color: #fff;
-    font-size: 15rem;
-    font-weight: 700;
-    padding: 0 20px;
-    position: absolute;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  
-  .hero-banner__stroked-title {
-    color: transparent;
-    -webkit-text-stroke: 2px white;
-    text-stroke: 2px white;
-  }
-  
-  .hero-banner__image {
-    border-radius: 20px;
-    position: fixed;
-    transform: rotate(-15deg);
-    width: 450px;
-  }
-  
-  .content {
-    background-color: #eaeaea;
-    font-size: 40px;
-    padding: 120px 80px;
-    height: 100vh;
-    width: 100vw;
-  
-  }
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  position: relative;
+  justify-content: center;
+  z-index: 1;
+  overflow-x: hidden;
+}
 
-  
-  body {
-    background-color: #000;
-    font-family: Arial;
-  }
-  
-  
+.hero-banner__title {
+  color: #fff;
+  font-size: 15rem;
+  font-weight: 700;
+  padding: 0 20px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+}
 
+.hero-banner__stroked-title {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+}
 
+.hero-banner__image {
+  border-radius: 20px;
+  position: fixed;
+  transform: rotate(-15deg);
+  width: 450px;
+}
 
+section.hero {
+  /* position: fixed; */
+  top:0px;
+  /* z-index: -1; */
+}
 
+main {
+  position: relative;
+  background-color: transparent;
+  z-index: 3;
+  color:white
+}
+
+section.about{
+  font-size: 40px;
+  padding: 120px 80px;
+  height: 100vh;
+  width: 100vw;
+}
 
