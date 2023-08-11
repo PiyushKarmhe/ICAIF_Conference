@@ -5,6 +5,11 @@ window.addEventListener("load", function () {
   if (loadingElement) {
     setTimeout(function () {
       loadingElement.style.display = "none";
+
+      AOS.init({
+        duration: 1200,
+      })  //AOS animations
+
     }, 5000); // 5000 milliseconds = 5 seconds
   }
 });
