@@ -9,6 +9,7 @@ header {
     justify-content: center;
     z-index: 9;
     height: min-content;
+    width:100vw;
 }
 
 .nav {
@@ -67,8 +68,21 @@ header {
     border-radius: 8px 8px 0 0;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 428px) {
     .nav {
-        overflow: auto;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        margin:10px 15px;
+        width:3.5rem;
+        height: 3.5rem;
+        border-radius: 3rem;
+    }
+
+    header{
+        justify-content: flex-start;
+    }
+
+    .toggle{
+        display: block;
     }
 }
