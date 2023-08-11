@@ -27,6 +27,10 @@ header {
     display: none;
 }
 
+.nav .mobile-menu-logo{
+    display: none;
+}
+
 .nav-item {
     color: #83818c;
     padding: 20px;
@@ -87,13 +91,16 @@ header {
         align-items: center;
         overflow: hidden;
         box-shadow: 0 10px 40px rgba(170, 124, 124, 0.9);
+
+        cursor: pointer;
     }
 
-    .nav-item{
+    .nav-item, .nav-indicator{
         display: none;
     }
 
     .nav svg{
+        display: block;
         height: 2.75rem;
         width: auto;
         fill:white
@@ -101,6 +108,12 @@ header {
 
     .nav svg path{
         fill: white;
+    }
+
+    .nav .mobile-menu-logo{
+        display: block;
+        height: 3.5rem;
+        width: auto;
     }
 
     header{
