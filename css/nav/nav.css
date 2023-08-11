@@ -90,7 +90,7 @@ header {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        box-shadow: 0 10px 40px rgba(170, 124, 124, 0.9);
+        box-shadow:  0 0 40px rgba(190, 152, 152, 0.9);
 
         cursor: pointer;
     }
@@ -114,6 +114,27 @@ header {
         display: block;
         height: 3.5rem;
         width: auto;
+    }
+
+    .nav:focus{
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap:15px;
+    }
+
+    .nav:focus .nav-item{
+        font-size: 1.3rem;
+        display: block;
+        min-width:35vw;
+        padding:10px;
+        background-color: azure;
+        border-radius: 5px; 
+        margin-left: 150px;   
+
+        box-shadow:  0 0 40px rgba(190, 152, 152, 0.9);
     }
 
     header{
