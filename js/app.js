@@ -70,7 +70,7 @@ if (window.matchMedia("(min-width: 768px)").matches) {
 let smoothscrollLinks = document.querySelectorAll(".smoothscroll");
 
 for (let i = 0; i < smoothscrollLinks.length; i++) {
-  
+
   smoothscrollLinks[i].addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -78,8 +78,8 @@ for (let i = 0; i < smoothscrollLinks.length; i++) {
 
     if (target) {
       let startPosition = window.pageYOffset;
-      let targetPosition = target.getBoundingClientRect().top-100;
-      // let targetPosition = $target.getBoundingClientRect().top + startPosition;
+      // let targetPosition = target.getBoundingClientRect().top-100;
+      let targetPosition = target.getBoundingClientRect().top + startPosition -100;
 
       let startTime = null;
 
