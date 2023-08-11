@@ -1,0 +1,22 @@
+.sec-con {
+    width: 90vw;
+    min-width: 90%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.09);
+    border-radius: 16px;
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: saturate(100%) blur(4.2px);
+    -webkit-backdrop-filter: saturate(180%) blur(4.2px);
+    /* border: 1px solid rgba(255, 255, 255, 0.02); */
+    padding: 10px;
+    outline: 15px solid hsla(0, 49%, 10%, 0.04);
+    outline-offset: -7.5px;
+    overflow-x: hidden;
+  }
+  
+  .about {
+    font-size: 40px;
+    height: 100vh;
+  }
+
+  
