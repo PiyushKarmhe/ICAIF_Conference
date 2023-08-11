@@ -1,26 +1,26 @@
 // TEMP
-let loadingElement = document.querySelector(".loader");
-loadingElement.style.display = "none";
+// let loadingElement = document.querySelector(".loader");
+// loadingElement.style.display = "none";
 
-AOS.init({
-  duration: 1200,
-}); //AOS animations
+// AOS.init({
+//   duration: 1200,
+// }); //AOS animations
 
 // Loader
-// window.addEventListener("load", function () {
-//   let loadingElement = document.querySelector(".loader");
+window.addEventListener("load", function () {
+  let loadingElement = document.querySelector(".loader");
 
-//   if (loadingElement) {
-//     setTimeout(function () {
-//       loadingElement.style.display = "none";
+  if (loadingElement) {
+    setTimeout(function () {
+      loadingElement.style.display = "none";
 
-//       AOS.init({
-//         duration: 1200,
-//       })  //AOS animations
+      AOS.init({
+        duration: 1200,
+      })  //AOS animations
 
-//     }, 5000); // 5000 milliseconds = 5 seconds
-//   }
-// });
+    }, 5000); // 5000 milliseconds = 5 seconds
+  }
+});
 // Loader End
 
 // Astronaut Scroll Animation

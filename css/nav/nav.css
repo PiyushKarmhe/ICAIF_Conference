@@ -77,9 +77,17 @@ header {
 }
 
 @media (max-width: 428px) {
+    header{
+        /* border: 1px solid white; */
+        width: min-content;
+        height: auto;
+        align-self: flex-start;
+
+        justify-content: flex-start;
+    }
+
     .nav {
-        overflow-y: hidden;
-        overflow-x: scroll;
+        overflow: hidden;
         margin:10px 15px;
         width:3.5rem;
         height: 3.5rem;
@@ -116,6 +124,10 @@ header {
         width: auto;
     }
 
+    header:focus{
+        height: 30vh;
+    }
+
     .nav:focus{
         overflow: visible;
         display: flex;
@@ -132,13 +144,9 @@ header {
         padding:10px;
         background-color: azure;
         border-radius: 5px; 
-        margin-left: 150px;   
+        margin-left: 120px;   
 
         box-shadow:  0 0 40px rgba(190, 152, 152, 0.9);
-    }
-
-    header{
-        justify-content: flex-start;
     }
 
     .toggle{

@@ -19,3 +19,28 @@ items.forEach((item, index) => {
   item.addEventListener('click', e => {handleIndicator(e.target);});
   item.classList.contains('is-active') && handleIndicator(item);
 });
+
+
+// document.body.addEventListener("click",(e)=>{
+//   console.log("Clicked on : ",e.target);
+// });
+
+const nav  = document.querySelector(".nav");
+const navLogo = document.querySelector(".mobile-menu-logo");
+const navItems = document.querySelectorAll(".nav-item");
+
+nav.addEventListener('mousedown', function(event) {
+  event.preventDefault(); // Prevent input from losing focus on mousedown
+});
+
+navLogo.addEventListener("click",()=>{
+  nav.focus();
+  console.log("img");
+});
+
+navItems.forEach(item => {
+  item.addEventListener("click",()=>{
+    nav.blur();
+    console.log("close");
+  })
+});
