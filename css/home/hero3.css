@@ -119,7 +119,7 @@ body {
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  top:8rem;
+  top: 8rem;
 }
 
 .hero-banner__stroked-title {
@@ -142,6 +142,79 @@ section.hero {
   top: 0px;
 }
 
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 5vh;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  z-index: 9;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 2s ease-in-out infinite;
+  -moz-animation: fade_move_down 2s ease-in-out infinite;
+  animation: fade_move_down 2s ease-in-out infinite;
+}
+
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fade_move_down {
+  0% {
+    -moz-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -moz-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fade_move_down {
+  0% {
+    transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
 main {
   width: 100vw;
   position: relative;
@@ -153,10 +226,10 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:20px;
+  gap: 20px;
 }
 
-.sec-gap{
+.sec-gap {
   width: auto;
   height: 70vh;
 }
@@ -171,7 +244,7 @@ main {
   backdrop-filter: saturate(100%) blur(4.2px);
   -webkit-backdrop-filter: saturate(180%) blur(4.2px);
   /* border: 1px solid rgba(255, 255, 255, 0.02); */
-  padding:10px;
+  padding: 10px;
   outline: 15px solid hsla(0, 49%, 10%, 0.04);
   outline-offset: -7.5px;
   overflow-x: hidden;
