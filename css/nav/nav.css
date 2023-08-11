@@ -17,7 +17,7 @@ header {
     position: relative;
     overflow: hidden;
     max-width: 100%;
-    background-color: #261717;
+    background-color: #171616;
     padding: 0 20px;
     border-radius: 40px;
     box-shadow: 0 10px 40px rgba(98, 59, 59, 0.8);
@@ -76,6 +76,28 @@ header {
         width:3.5rem;
         height: 3.5rem;
         border-radius: 3rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        box-shadow: 0 10px 40px rgba(98, 59, 59, 0.8);
+    }
+
+    .nav-item{
+        display: none;
+    }
+
+    .nav svg{
+        height: 2.75rem;
+        width: auto;
+        fill:white
+    }
+
+    .nav svg path{
+        fill: white;
     }
 
     header{
