@@ -23,6 +23,10 @@ header {
     box-shadow: 0 10px 40px rgba(98, 59, 59, 0.8);
 }
 
+.nav svg{
+    display: none;
+}
+
 .nav-item {
     color: #83818c;
     padding: 20px;
@@ -82,8 +86,7 @@ header {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-
-        box-shadow: 0 10px 40px rgba(98, 59, 59, 0.8);
+        box-shadow: 0 10px 40px rgba(170, 124, 124, 0.9);
     }
 
     .nav-item{
