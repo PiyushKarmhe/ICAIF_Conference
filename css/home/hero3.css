@@ -111,6 +111,17 @@ body {
   text-transform: uppercase;
 }
 
+.hero-banner__title2 {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 700;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top:8rem;
+}
+
 .hero-banner__stroked-title {
   color: transparent;
   -webkit-text-stroke: 2px white;
