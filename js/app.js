@@ -1,4 +1,7 @@
 // Loader
+let loadingElement = document.querySelector(".loader");
+loadingElement.style.display = "none";
+
 window.addEventListener("load", function () {
   let loadingElement = document.querySelector(".loader");
 
