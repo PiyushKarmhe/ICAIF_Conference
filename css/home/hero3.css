@@ -13,6 +13,15 @@ body {
   overflow-x: hidden;
 }
 
+.scrollable-place {
+  height: 1000px;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 /* Hero Animation*/
 .stars,
 .twinkling,
@@ -307,8 +316,8 @@ main {
 
   }
 
-  main{
-    padding:20px;
+  main {
+    padding: 20px;
   }
 
 }

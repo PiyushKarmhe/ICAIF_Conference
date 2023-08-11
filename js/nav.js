@@ -20,11 +20,6 @@ items.forEach((item, index) => {
   item.classList.contains('is-active') && handleIndicator(item);
 });
 
-
-// document.body.addEventListener("click",(e)=>{
-//   console.log("Clicked on : ",e.target);
-// });
-
 const nav  = document.querySelector(".nav");
 const navLogo = document.querySelector(".mobile-menu-logo");
 const navItems = document.querySelectorAll(".nav-item");
