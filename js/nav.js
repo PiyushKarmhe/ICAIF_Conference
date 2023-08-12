@@ -1,6 +1,7 @@
 const indicator = document.querySelector(".nav-indicator");
 const items = document.querySelectorAll(".nav-item");
 const dropdowns = document.querySelectorAll(".dropdown-btn");
+const dropItems = document.querySelectorAll(".dropdown-item");
 
 function handleIndicator(el) {
   items.forEach((item) => {
@@ -26,6 +27,9 @@ items.forEach((item, index) => {
 const nav = document.querySelector(".nav");
 const navLogo = document.querySelector(".mobile-menu-logo");
 const navItems = document.querySelectorAll(".nav-item");
+const nonDrop = Array.from(navItems).filter(
+  (navItem) => !navItem.classList.contains("dropdown-btn")
+);
 
 nav.addEventListener("mousedown", function (event) {
   event.preventDefault(); // Prevent input from losing focus on mousedown
@@ -36,10 +40,30 @@ navLogo.addEventListener("click", () => {
   console.log("img");
 });
 
-navItems.forEach((item) => {
+nonDrop.forEach((item) => {
   item.addEventListener("click", () => {
     nav.blur();
     console.log("close");
+  });
+});
+
+dropItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    nav.blur();
+    console.log("close");
+    const dropdown = document.querySelectorAll(".dropdown-act");
+    dropdown.forEach((drop) => {
+      drop.classList.replace("dropdown-act", "dropdown");
+    });
+  });
+});
+
+dropdowns.forEach(item=>{
+  item.addEventListener("click",()=>{
+    item.nextElementSibling.classList.remove("dropdown");
+    requestAnimationFrame(() => {
+      item.nextElementSibling.classList.add("dropdown-act");
+    });
   });
 });
 
@@ -57,16 +81,14 @@ dropdowns.forEach((item) => {
   });
 });
 
-Array.from(navItems)
-  .filter((navItem) => !navItem.classList.contains("dropdown-btn"))
-  .forEach((item) => {
-    item.addEventListener("mouseover", (e) => {
-      const dropdown = document.querySelectorAll(".dropdown-act");
-      dropdown.forEach((drop) => {
-        drop.classList.replace("dropdown-act", "dropdown");
-      });
+nonDrop.forEach((item) => {
+  item.addEventListener("mouseover", (e) => {
+    const dropdown = document.querySelectorAll(".dropdown-act");
+    dropdown.forEach((drop) => {
+      drop.classList.replace("dropdown-act", "dropdown");
     });
   });
+});
 
 document.body.addEventListener("click", (e) => {
   const dropdownItems = document.querySelectorAll(".dropdown-item");
