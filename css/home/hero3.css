@@ -49,7 +49,7 @@ body {
 }
 
 .clouds {
-  z-index: 1;
+  z-index: 0;
   background: transparent url("../../assets/images/background_3.png") repeat top center;
   background-size: auto;
   animation: move-clouds-back 100s linear infinite;
