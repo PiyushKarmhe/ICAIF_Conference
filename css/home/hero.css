@@ -8,9 +8,21 @@
 
 body {
   background-color: #000;
-  font-family: Arial;
   width: 100vw;
   overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #424242; 
+  border-radius: 8px;
 }
 
 .scrollable-place {
@@ -312,7 +324,7 @@ main {
     from {
       background-position: 500px 0;
     }
-  
+
     to {
       background-position: -10000px 0;
     }
