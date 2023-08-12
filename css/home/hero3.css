@@ -57,7 +57,7 @@ body {
 }
 
 .hero .clouds:last-child {
-  animation: move-clouds-back2 80s cubic-bezier(.46, .03, .52, .96) infinite
+  animation: move-clouds-back2 80s cubic-bezier(.46, .03, .52, .96) infinite;
 }
 
 @keyframes move-clouds-back {
@@ -290,17 +290,31 @@ main {
   }
 
   .clouds {
-    animation: move-clouds-back 10s linear alternate-reverse;
+    animation: move-clouds-back 50s linear alternate-reverse;
     background-size: cover;
+  }
+
+  .hero .clouds:last-child {
+    animation: move-clouds-back2 30s cubic-bezier(.46, .03, .52, .96) infinite;
   }
 
   @keyframes move-clouds-back {
     from {
-      background-position: 2000 0;
+      background-position: 100 0;
     }
 
     to {
       background-position: -500px 0;
+    }
+  }
+
+  @keyframes move-clouds-back2 {
+    from {
+      background-position: 500px 0;
+    }
+  
+    to {
+      background-position: -10000px 0;
     }
   }
 
@@ -313,7 +327,6 @@ main {
     transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
     /* top :  21.4167px;
     right :  389px; */
-
   }
 
   main {
