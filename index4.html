@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/nav/nav.css">
     <link rel="stylesheet" href="./css/home/about.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
     <!-- JS -->
     <script src="https://unpkg.com/aos@2.3.0/dist/aos.js" defer></script>
@@ -77,30 +78,102 @@
       <header>
         <nav class="nav" tabindex="1">
           <img class="mobile-menu-logo" src="./assets/images/moon.png" alt="" srcset="">
-          <!-- <svg width="800px" height="800px" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7C4 6.44771 4.44772 6 5 6H24C24.5523 6 25 6.44771 25 7C25 7.55229 24.5523 8 24 8H5C4.44772 8 4 7.55229 4 7Z" fill="#000000"/><path d="M4 13.9998C4 13.4475 4.44772 12.9997 5 12.9997L16 13C16.5523 13 17 13.4477 17 14C17 14.5523 16.5523 15 16 15L5 14.9998C4.44772 14.9998 4 14.552 4 13.9998Z" fill="#000000"/><path d="M5 19.9998C4.44772 19.9998 4 20.4475 4 20.9998C4 21.552 4.44772 21.9997 5 21.9997H22C22.5523 21.9997 23 21.552 23 20.9998C23 20.4475 22.5523 19.9998 22 19.9998H5Z" fill="#000000"/></svg> -->
-          <a href="#hero" class="nav-item is-active smoothscroll" active-color="orange">Home</a>
+          <a href="#hero" class="nav-item is-active smoothscroll nav-home" active-color="orange">Home</a>
           <a href="#about" class="nav-item smoothscroll" active-color="green">About</a>
-          <a href="#" class="nav-item smoothscroll" active-color="blue">Testimonials</a>
-          <a href="#" class="nav-item smoothscroll" active-color="red">Blog</a>
+          <a href="#" class="nav-item smoothscroll dropdown-btn" active-color="blue">Dropdown</a>
+          <div class="dropdown" data-aos="slide-up">
+            <a class="dropdown-item smoothscroll" href="#">Item 1</a>
+            <a class="dropdown-item smoothscroll" href="#">Item 2</a>
+            <a class="dropdown-item smoothscroll" href="#">Item 3</a>
+            <a class="dropdown-item smoothscroll" href="#">Item 4</a>
+          </div>
+          <a href="#" class="nav-item smoothscroll dropdown-btn" active-color="red">Dropdown 2</a>
+          <div class="dropdown" data-aos="slide-up">
+            <a class="dropdown-item smoothscroll" href="#">Item 5</a>
+            <a class="dropdown-item smoothscroll" href="#">Item 6</a>
+            <a class="dropdown-item smoothscroll" href="#">Item 7</a>
+            <a class="dropdown-item smoothscroll" href="#">Item 8</a>
+          </div>
           <a href="#" class="nav-item smoothscroll" active-color="rebeccapurple">Contact</a>
           <span class="nav-indicator"></span>
         </nav>        
       </header>
       <!-- about -->
       <section class="sec-con about" id="about">
-        <marquee class="css1">
-          <img src="./assets/images/3829383.png">
-          <img src="./assets/images/4514833.png">
-          <img src="./assets/images/5195901.png">
-          <img src="./assets/images/3829383.png">
-          <img src="./assets/images/4514833.png">
-          <img src="./assets/images/5195901.png">
-          <img src="./assets/images/3829383.png">
-          <img src="./assets/images/4514833.png">
-          <img src="./assets/images/5195901.png">
-        </marquee>
-        <!-- <h1>International Conference on Aerospace Technologies and Innovations for Future</h1> -->
+        <h1>International Conference on Aerospace Technologies and Innovations for Future</h1>
       </section>
     </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer__addr">
+          <h1 class="footer__logo">ICAIF</h1>
+              
+          <h2>Address</h2>
+          
+          <address>
+            VIT BHOPAL Kotri Kalan, Indore Road, Bhopal, Madhya Pradesh<br>
+            <br>
+            +91-9321923010
+                
+            <a class="footer__btn" href="icsdp@vitbhopal.ac.in">Email Us</a>
+          </address>
+        </div>
+        
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">Quick Links</h2>
+      
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Home</a>
+              </li>
+      
+              <li>
+                <a href="#">Speaker</a>
+              </li>
+                  
+              <li>
+                <a href="#">Regestration</a>
+              </li>
+
+              <li>
+                <a href="#">Call For Paper</a>
+              </li>
+
+              <li>
+                <a href="#">Important Dates</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav__item nav__item--extra">
+            <h2 class="nav__title">College</h2>
+            
+            <ul class="nav__ul nav__ul--extra">
+              <li>
+                <a href="#">VIT Bhopal University</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <h2 class="nav__title">About</h2>
+            
+            <ul class="nav__ul">
+              <li>
+                <a href="#">VIT Bhopal University is a reputed and esteemed University comprising of a new outlook which caters towards attaining excellence through teaching, learning and research.</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="legal">
+          <p>&copy; ICAIF, All Right Reserved.</p>
+          
+          <div class="legal__links">
+            <span>Designed by Piyush & Prasiddhi</span>
+          </div>
+        </div>
+      </footer>
   </body>
 </html>
