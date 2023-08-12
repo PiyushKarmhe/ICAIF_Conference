@@ -15,12 +15,14 @@ header {
 .nav {
     display: inline-flex;
     position: relative;
-    overflow: hidden;
+    /* overflow-x: hidden; */
     max-width: 100%;
     background-color: #171616;
     padding: 0 20px;
     border-radius: 40px;
     box-shadow: 0 10px 40px rgba(98, 59, 59, 0.8);
+
+    z-index: 9;
 }
 
 .nav svg{
@@ -54,6 +56,40 @@ header {
     border-radius: 8px 8px 0 0;
     opacity: 0;
     transition: 0.3s;
+}
+
+.dropdown{
+    display: none;
+}
+
+.dropdown-act{
+    display: block;
+    position: absolute;
+    background-color: white;
+    border-radius: 15px;
+    top:80px;
+    left:25%;
+
+    min-height:100px;
+    width:300px;
+    transition: 0.3s;
+
+    box-shadow: 0 10px 40px rgba(98, 59, 59, 0.8);
+    z-index: 1;
+}
+
+.dropdown-act::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 25%;
+    width: 50%;
+    height: 7px;
+    background-color: black;
+    border-radius: 8px 8px 0 0;
+    opacity: 1;
+    transition: 0.3s;
+    z-index: 2;
 }
 
 .nav-item:not(.is-active):hover:before {
