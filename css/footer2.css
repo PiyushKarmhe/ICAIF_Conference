@@ -2,8 +2,10 @@
   position: relative;
   display: flex;
   flex-flow: row wrap;
-  padding: 30px 30px 20px 30px;
+  padding: 50px 50px 30px 30px;
   color: #ffffff;
+  letter-spacing: 1.5px;
+  line-height: 20px;
 
   background: rgba(0, 0, 0, 0.09);
   border-radius: 16px;
@@ -12,6 +14,7 @@
   outline: 15px solid hsla(0, 49%, 10%, 0.04);
   outline-offset: -7.5px;
   z-index: 7;
+  transition: 0.3s;
 }
 
 .footer>* {
@@ -39,14 +42,19 @@
 }
 
 .nav__title {
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .footer .address {
   font-style: normal;
   color: #cac4c4;
   text-align: justify;
+}
+
+.heart {
+  color: #fb0101;
+  font-size: 25px;
 }
 
 .footer__btn {
@@ -62,6 +70,12 @@
   margin: 0.6em 0;
   font-size: 1rem;
   padding: 0 1.3em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.footer__btn:hover{
+  background-color: #171616;
 }
 
 .footer ul {
@@ -87,8 +101,16 @@
   margin-right: 1.25em;
 }
 
-.nav__ul a {
+.nav__ul li a {
   color: #cac4c4;
+}
+
+.nav__ul li a:hover {
+  color: #f4eded;
+}
+
+.footer_desc{
+  text-align: justify;
 }
 
 .nav__ul--extra {
@@ -100,6 +122,9 @@
   display: flex;
   flex-wrap: wrap;
   color: #cac4c4;
+  border-top: 1.5px solid white;
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .legal__links {
@@ -107,9 +132,17 @@
   align-items: center;
 }
 
+.nav__item{
+  margin-top: 20px;
+}
 
 
 @media screen and (min-width: 24.375em) {
+
+  .legal {
+    line-height: 30px;
+  }
+
   .legal .legal__links {
     margin-left: auto;
   }
