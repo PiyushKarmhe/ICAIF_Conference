@@ -73,7 +73,7 @@ header {
 
     min-height:100px;
     width:300px;
-    transition: 0.3s;
+    transition: 0.5s;
 
     box-shadow: 0 10px 40px rgba(98, 59, 59, 0.8);
     z-index: 2;
