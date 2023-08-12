@@ -52,8 +52,14 @@ if (window.matchMedia("(min-width: 768px)").matches) {
 
     if (scrollY >= maxScroll) {
       let opacity = sigmoid((maxScroll - scrollY) * 0.01);
-      if (opacity < 0.01) opacity = 0;
+      if (opacity < 0.01){ 
+        opacity = 0;
+        scrollElement.style.display="none";
+      }else{
+        scrollElement.style.display="block";
+      }
       scrollElement.style.opacity = `${opacity}`;
+
     } else {
       const opacity = sigmoid((maxScroll - scrollY) * 0.01);
       scrollElement.style.opacity = `${opacity}`;
