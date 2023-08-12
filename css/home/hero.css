@@ -1,111 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@600&family=Work+Sans:wght@100&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Alegreya SC', serif;
-    font-family: 'Exo', sans-serif;
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Lato', sans-serif;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    overflow-x: hidden;
-    width: 100vw;
+  background-color: #000;
+  font-family: Arial;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.scrollable-place {
+  height: 1000px;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
 /* Hero Animation*/
 .stars,
 .twinkling,
 .clouds {
-    position: absolute;
-    display: block;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
+  position: fixed;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .stars {
-    z-index: 0;
-    background: #000 url("../../assets/images/background_1.png") repeat top center;
+  z-index: 0;
+  background: transparent url("../../assets/images/background_1.png") repeat top center;
 }
 
 .twinkling {
-    z-index: 1;
-    background: transparent url("../../assets/images/background_2.png") repeat top center;
-    animation: move-twink-back 200s linear infinite;
+  z-index: 0;
+  background: transparent url("../../assets/images/background_2.png") repeat top center;
+  animation: move-twink-back 200s linear infinite;
 }
 
 .clouds {
-    z-index: 2;
-    background: transparent url("../../assets/images/background_3.png") repeat top center;
-    animation: move-clouds-back 200s linear infinite;
+  z-index: 0;
+  background: transparent url("../../assets/images/background_3.png") repeat top center;
+  background-size: auto;
+  animation: move-clouds-back 100s linear infinite;
+  opacity: 1;
 }
 
-@keyframes move-twink-back {
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: -10000px 5000px;
-    }
+.hero .clouds:last-child {
+  animation: move-clouds-back2 80s cubic-bezier(.46, .03, .52, .96) infinite;
 }
 
 @keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 0;
+  }
+}
+
+@keyframes move-clouds-back2 {
+  from {
+    background-position: 500px 0;
+  }
+
+  to {
+    background-position: -10000px 0;
+  }
+}
+
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+.hero-banner {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  position: relative;
+  justify-content: center;
+  z-index: 5;
+  overflow-x: hidden;
+}
+
+.hero-banner__title {
+  color: #fff;
+  font-size: 15rem;
+  font-weight: 700;
+  padding: 0 20px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero-banner__title2 {
+  font-family: 'Ruwudu', serif;
+  font-family: 'Work Sans', sans-serif;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 100;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 8rem;
+  letter-spacing: 3px;
+}
+
+.hero-banner__stroked-title {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+}
+
+.hero-banner__image {
+  border-radius: 20px;
+  position: fixed;
+  transform: rotate(-15deg);
+  width: 450px;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+  /* top :  21.4167px;
+  right :  389px; */
+}
+
+section.hero {
+  top: 0px;
+}
+
+.sec-con {
+  width: 90vw;
+  min-width: 90%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.09);
+  border-radius: 16px;
+  backdrop-filter: saturate(100%) blur(4.2px);
+  -webkit-backdrop-filter: saturate(180%) blur(4.2px);
+  padding: 10px;
+  outline: 15px solid hsla(0, 49%, 10%, 0.04);
+  outline-offset: -7.5px;
+  overflow-x: hidden;
+}
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 5vh;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  z-index: 9;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 2s ease-in-out infinite;
+  -moz-animation: fade_move_down 2s ease-in-out infinite;
+  animation: fade_move_down 2s ease-in-out infinite;
+}
+
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fade_move_down {
+  0% {
+    -moz-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -moz-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fade_move_down {
+  0% {
+    transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+main {
+  width: 100vw;
+  position: relative;
+  background-color: transparent;
+  z-index: 3;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.sec-gap {
+  width: auto;
+  height: 70vh;
+}
+
+.sec-con {
+  width: 90vw;
+  min-width: 90%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.09);
+  border-radius: 16px;
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  backdrop-filter: saturate(100%) blur(4.2px);
+  -webkit-backdrop-filter: saturate(180%) blur(4.2px);
+  /* border: 1px solid rgba(255, 255, 255, 0.02); */
+  padding: 10px;
+  outline: 15px solid hsla(0, 49%, 10%, 0.04);
+  outline-offset: -7.5px;
+  overflow-x: hidden;
+}
+
+.about {
+  font-size: 40px;
+}
+
+@media (max-width: 420px) {
+
+  .hero-banner__title {
+    font-size: 7rem;
+    font-weight: 700;
+    padding: 0 20px;
+  }
+
+  .clouds {
+    animation: move-clouds-back 50s linear alternate-reverse;
+    background-size: cover;
+  }
+
+  .hero .clouds:last-child {
+    animation: move-clouds-back2 30s cubic-bezier(.46, .03, .52, .96) infinite;
+  }
+
+  @keyframes move-clouds-back {
     from {
-        background-position: 0 0;
+      background-position: 100 0;
     }
 
     to {
-        background-position: 10000px 0;
+      background-position: -500px 0;
     }
-}
+  }
 
-/* Hero Animation END */
+  @keyframes move-clouds-back2 {
+    from {
+      background-position: 500px 0;
+    }
+  
+    to {
+      background-position: -10000px 0;
+    }
+  }
 
-section.hero {
-    height: 100vh;
-    width: 100vw;
-}
+  .hero-banner {
+    z-index: 1;
+  }
 
-.header-mid {
-    display: flex;
-    width: 100vw;
-    height: 70%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    z-index: 3;
-}
+  .hero-banner__image {
+    transform: rotate(-15deg) scale(0.7);
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+    /* top :  21.4167px;
+    right :  389px; */
+  }
 
-.heading {
+  main {
     padding: 20px;
-    text-transform: uppercase;
-    /* margin: 0 10vh 0; */
-    display: flex;
-    flex-direction: column;
-    line-height: 14vh;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
-    background-image: url("../../assets/images/back.png");
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-position: 0 0;
-    animation: back 20s linear infinite;
-    z-index: 3;
-}
+  }
 
-.heading h1 {
-    font-size: clamp(90px,20vw,200px);
-}
-
-@keyframes back {
-    100% {
-        background-position: 2000px 0;
-    }
 }
