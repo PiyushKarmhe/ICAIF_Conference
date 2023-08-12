@@ -4,15 +4,23 @@
   height: 100vh;
 }
 
-.about h1 {
+.sec-gap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-gap h1 {
   text-align: center;
   font-family: 'Cabin', sans-serif;
   font-size: 3rem;
-
+  letter-spacing: 7px;
+  line-height: 60px;
 }
 
 @media (max-width: 428px) {
-  .about h1 {
+  .sec-gap h1 {
     font-size: 1.5rem;
+    line-height: 30px;
   }
 }

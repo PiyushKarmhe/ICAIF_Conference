@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Cabin:wght@600;700&family=Kanit:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&family=Ruwudu:wght@600&family=Work+Sans:wght@100&display=swap');
+
 .footer {
   position: relative;
   display: flex;
@@ -15,6 +17,8 @@
   outline-offset: -7.5px;
   z-index: 7;
   transition: 0.3s;
+
+  font-family: 'Cabin', sans-serif;
 }
 
 .footer>* {
@@ -111,6 +115,7 @@
 
 .footer_desc{
   text-align: justify;
+  font-weight: 100;
 }
 
 .nav__ul--extra {
