@@ -12,6 +12,11 @@ header {
     width:100vw;
 }
 
+.css1 {
+    position: sticky;
+    top: 120px;
+}
+
 .nav {
     display: inline-flex;
     position: relative;
@@ -189,3 +194,4 @@ header {
         display: block;
     }
 }
+
