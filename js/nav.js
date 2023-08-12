@@ -39,3 +39,13 @@ navItems.forEach(item => {
     console.log("close");
   })
 });
+
+const dropdowns = document.querySelectorAll(".dropdown-btn");
+dropdowns.forEach(item=>{
+  item.addEventListener("mouseover",(e)=>{
+    item.nextElementSibling.classList.replace("dropdown","dropdown-act");
+  });
+  item.addEventListener("mouseleave",()=>{
+    item.nextElementSibling.classList.replace("dropdown-act","dropdown");
+  });
+});
