@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Oxygen:700");
+
+.marquee-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    width: 30vw;
+    height: 60px;
+    border-radius: 105px;
+
+    background: rgba(0, 0, 0, 0.09);
+    backdrop-filter: saturate(100%) blur(4.2px);
+    -webkit-backdrop-filter: saturate(180%) blur(4.2px);
+    outline: 15px solid hsla(0, 49%, 10%, 0.04);
+    outline-offset: -7.5px;
+}
+
+.marquee-wrap,
+.marquee-wrap ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.marquee-wrap>li {
+    display: flex;
+    align-items: center;
+    width: var(--scroller-size);
+    will-change: transform;
+    animation: text-scroller 15000ms linear 0ms normal infinite;
+    text-indent: 0;
+    justify-content: space-around;
+    -webkit-transition: all 3000ms linear 0ms;
+    -moz-transition: all 3000ms linear 0ms;
+    -ms-transition: all 3000ms linear 0ms;
+    -o-transition: all 3000ms linear 0ms;
+    transition: all 3000ms linear 0ms;
+    white-space: nowrap;
+}
+
+@keyframes text-scroller {
+    100% {
+        transform: translateX(calc(var(--scroller-size)*-0.5));
+    }
+}
+
+.marquee-wrap>li:nth-child(2) {
+    animation-direction: reverse;
+    color: blue;
+}
+
+.marquee-wrap>li>ul li {
+    display: inline-block;
+    padding: 0 5vw;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+:root {
+    --scroller-size: 150vw;
+}
+
+@media (max-width: 800px) {
+    .marquee-wrap {
+        width: max-content;
+        height: 60px;
+        border-radius: 105px;
+        margin: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --scroller-size: 200vw;
+    }
+
+    .marquee-wrap {
+        width: max-content;
+        height: 60px;
+        border-radius: 105px;
+        margin:5px;
+    }
+}

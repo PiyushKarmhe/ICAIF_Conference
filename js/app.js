@@ -1,10 +1,10 @@
 // TEMP
-// let loadingElement = document.querySelector(".loader");
-// loadingElement.style.display = "none";
+let loadingElement = document.querySelector(".loader");
+loadingElement.style.display = "none";
 
-// AOS.init({
-//   duration: 1200,
-// }); //AOS animations
+AOS.init({
+  duration: 1200,
+}); //AOS animations
 
 //Scroll Control
 function disableScroll() {
@@ -16,20 +16,20 @@ function enableScroll() {
 }
 
 // Loader
-window.addEventListener("load", function () {
-  let loadingElement = document.querySelector(".loader");
-  disableScroll();
+// window.addEventListener("load", function () {
+//   let loadingElement = document.querySelector(".loader");
+//   disableScroll();
 
-  if (loadingElement) {
-    setTimeout(function () {
-      loadingElement.style.display = "none";
-      enableScroll();
-      AOS.init({
-        duration: 1200,
-      }); //AOS animations
-    }, 5000); // 5000 milliseconds = 5 seconds
-  }
-});
+//   if (loadingElement) {
+//     setTimeout(function () {
+//       loadingElement.style.display = "none";
+//       enableScroll();
+//       AOS.init({
+//         duration: 1200,
+//       }); //AOS animations
+//     }, 5000); // 5000 milliseconds = 5 seconds
+//   }
+// });
 // Loader End
 
 // Astronaut Scroll Animation
@@ -41,7 +41,7 @@ function sigmoid(x) {
   return 1 / (1 + Math.exp(-x));
 }
 
-if (window.matchMedia("(min-width: 768px)").matches) {
+if (window.matchMedia("(min-width: 428px)").matches) {
   window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
     const maxScroll = window.innerHeight;
@@ -51,15 +51,14 @@ if (window.matchMedia("(min-width: 768px)").matches) {
     const newScale = initialRight / (initialRight + scrollY * 10);
 
     if (scrollY >= maxScroll) {
-      let opacity = sigmoid((maxScroll - scrollY) * 0.01);
-      if (opacity < 0.01){ 
+      let opacity = sigmoid((maxScroll - scrollY) * 0.015);
+      if (opacity < 0.01) {
         opacity = 0;
-        scrollElement.style.display="none";
-      }else{
-        scrollElement.style.display="block";
+        scrollElement.style.display = "none";
+      } else {
+        scrollElement.style.display = "block";
       }
       scrollElement.style.opacity = `${opacity}`;
-
     } else {
       const opacity = sigmoid((maxScroll - scrollY) * 0.01);
       scrollElement.style.opacity = `${opacity}`;
@@ -126,3 +125,7 @@ function easeInOutCubic(t, b, c, d) {
   if ((t /= d / 2) < 1) return (c / 2) * t * t * t + b;
   return (c / 2) * ((t - 2) * t * t + 2) + b;
 }
+
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});
