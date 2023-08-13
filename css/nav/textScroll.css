@@ -64,6 +64,16 @@
     --scroller-size: 150vw;
 }
 
+@media (max-width: 800px) {
+    .marquee-wrap {
+        width: max-content;
+        height: 60px;
+        border-radius: 105px;
+        margin: 20px;
+    }
+}
+
+
 @media only screen and (max-width: 600px) {
     :root {
         --scroller-size: 200vw;

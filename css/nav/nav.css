@@ -131,19 +131,47 @@ header {
     border-radius: 8px 8px 0 0;
 }
 
-.logo{
+.logo {
     height: 70px;
     width: auto;
 }
 
-.logo-con{
+.logo-con {
     width: 30vw;
     padding: 10px;
-    padding-left:30px;
+    padding-left: 30px;
 }
 
-.logo-con-mob{
+.logo-con-mob {
     display: none;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .nav{
+        width:77vw;
+        padding:0 3px;
+        border-radius: 20px;
+    }
+
+    .logo-con{
+        width:10vw;
+        padding-left: 0;
+    }
+
+    .nav-indicator {
+        position: absolute;
+        left: 3px;
+        bottom: 0px;
+        height: 4px;
+        transition: 0.4s;
+        height: 5px;
+        z-index: 1;
+        border-radius: 8px 8px 0 0;
+    }
 }
 
 @media (max-width: 428px) {
@@ -238,11 +266,11 @@ header {
         top: 0px;
     }
 
-    .logo-con{
+    .logo-con {
         display: none;
     }
 
-    .logo-con-mob{
+    .logo-con-mob {
         display: flex;
         width: 20vw;
         padding: 10px;
