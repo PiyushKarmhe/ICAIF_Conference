@@ -132,7 +132,8 @@ header {
 }
 
 .logo {
-    height: 70px;
+    height: 100px;
+    background-color: #171616;
     width: auto;
 }
 
