@@ -1,10 +1,10 @@
 // TEMP
-let loadingElement = document.querySelector(".loader");
-loadingElement.style.display = "none";
+// let loadingElement = document.querySelector(".loader");
+// loadingElement.style.display = "none";
 
-AOS.init({
-  duration: 1200,
-}); //AOS animations
+// AOS.init({
+//   duration: 1200,
+// }); //AOS animations
 
 //Scroll Control
 function disableScroll() {
@@ -16,20 +16,20 @@ function enableScroll() {
 }
 
 // Loader
-// window.addEventListener("load", function () {
-//   let loadingElement = document.querySelector(".loader");
-//   disableScroll();
+window.addEventListener("load", function () {
+  let loadingElement = document.querySelector(".loader");
+  disableScroll();
 
-//   if (loadingElement) {
-//     setTimeout(function () {
-//       loadingElement.style.display = "none";
-//       enableScroll();
-//       AOS.init({
-//         duration: 1200,
-//       }); //AOS animations
-//     }, 5000); // 5000 milliseconds = 5 seconds
-//   }
-// });
+  if (loadingElement) {
+    setTimeout(function () {
+      loadingElement.style.display = "none";
+      enableScroll();
+      AOS.init({
+        duration: 1200,
+      }); //AOS animations
+    }, 5000); // 5000 milliseconds = 5 seconds
+  }
+});
 // Loader End
 
 // Astronaut Scroll Animation
@@ -51,7 +51,7 @@ if (window.matchMedia("(min-width: 428px)").matches) {
     const newScale = initialRight / (initialRight + scrollY * 10);
 
     if (scrollY >= maxScroll) {
-      let opacity = sigmoid((maxScroll - scrollY) * 0.01);
+      let opacity = sigmoid((maxScroll - scrollY) * 0.015);
       if (opacity < 0.01) {
         opacity = 0;
         scrollElement.style.display = "none";
