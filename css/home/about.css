@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Cabin:wght@600;700&family=Kanit:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&family=Ruwudu:wght@600&family=Work+Sans:wght@100&display=swap');
 
-.about {
-  height: 100vh;
-}
-
 .sec-gap{
   display: flex;
   justify-content: center;
@@ -16,6 +12,44 @@
   font-size: 3rem;
   letter-spacing: 7px;
   line-height: 60px;
+}
+
+.about {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  /* flex-wrap: wrap; */
+  gap:20px;
+}
+
+.about .image{
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .image img{
+  width:auto;
+  height:300px;
+}
+
+.about .content{
+  text-align: justify;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  line-height: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+
+.about .content .title span{
+  color:rgb(225, 20, 20);
 }
 
 @media (max-width: 428px) {
