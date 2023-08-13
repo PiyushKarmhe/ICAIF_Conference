@@ -22,6 +22,7 @@
   justify-content: space-evenly;
   /* flex-wrap: wrap; */
   gap:20px;
+  min-height: 100vh;
 }
 
 .about .image{
@@ -62,6 +63,10 @@
     flex-wrap: wrap;
   }
 
+  .about-rev{
+    flex-wrap: wrap-reverse;
+  }
+
   .about .image{
     width: fit-content;
     height: fit-content;
@@ -96,8 +101,8 @@
   .about .content{
     text-align: justify;
     font-size: 1.5rem;
-    letter-spacing: 4px;
-    line-height: 40px;
+    letter-spacing: 2.5px;
+    line-height: 35px;
   
     display: flex;
     flex-direction: column;
