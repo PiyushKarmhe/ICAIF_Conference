@@ -83,5 +83,6 @@
         width: max-content;
         height: 60px;
         border-radius: 105px;
+        margin:5px;
     }
 }
