@@ -133,7 +133,8 @@ header {
 
 .logo {
     height: 100px;
-    background-color: #171616;
+    /* background-color: #1716163d; */
+    background: none !important;
     width: auto;
 }
 
@@ -147,7 +148,7 @@ header {
     display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     header {
         flex-wrap: wrap;
     }
@@ -202,6 +203,8 @@ header {
 
         cursor: pointer;
         padding: 0 1.75rem;
+
+        gap:5px;
     }
 
     .nav-item,
@@ -274,8 +277,13 @@ header {
 
     .logo-con-mob {
         display: flex;
-        width: 20vw;
-        padding: 10px;
+        width: 15vw;
+        padding: 5px;
         /* padding-left:30px; */
+    }
+
+    .logo-con-mob img {
+        width: 15vw;
+        height: auto;
     }
 }

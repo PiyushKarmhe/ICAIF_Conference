@@ -64,12 +64,13 @@
     --scroller-size: 150vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .marquee-wrap {
         width: max-content;
         height: 60px;
         border-radius: 105px;
-        margin: 20px;
+        /* margin: 20px; */
+        flex-basis: 100%;
     }
 }
 
@@ -84,5 +85,11 @@
         height: 60px;
         border-radius: 105px;
         margin:5px;
+    }
+}
+
+@media (max-width: 420px) {
+    header{
+      flex-wrap: nowrap;
     }
 }

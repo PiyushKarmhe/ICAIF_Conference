@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Cabin:wght@600;700&family=Crimson+Text:wght@600&family=EB+Garamond&family=Exo+2:wght@600&family=Josefin+Sans:wght@600&family=Kanit:wght@400;500;600;700&family=Noto+Serif+Vithkuqi:wght@600&family=Raleway:wght@100;200;300&family=Roboto+Condensed:wght@400;700&family=Ruwudu:wght@600&family=Ubuntu:wght@500&family=Work+Sans:wght@100;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Cabin:wght@600;700&family=Crimson+Text:wght@600&family=EB+Garamond&family=Exo+2:wght@600&family=IBM+Plex+Sans:wght@500;600&family=Josefin+Sans:wght@600&family=Kanit:wght@400;500;600;700&family=Noto+Serif+Vithkuqi:wght@600&family=Raleway:wght@100;200;300&family=Roboto+Condensed:wght@400;700&family=Ruwudu:wght@400;500;600&family=Ubuntu:wght@500&family=Work+Sans:wght@100;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.patrons {
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.patrons .mb-5 {
+    /* font-family: 'Kanit', sans-serif; */
+    position: relative;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: whitesmoke;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 0px 20px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+
+
+.patrons_card {
+    margin: 50px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    gap:50px;
+    width: 100%;
+}
+
+.card {
+    margin-bottom: 4rem;
+    font-family: 'Ruwudu', serif;
+    font-size: 1.5rem;
+}
+
+.patrons_img {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+
+@media (max-width: 800px) {
+    .patrons_card {
+        margin: 50px 0px 0px 16px;
+    }
+
+}
+
+@media (max-width: 428px) {
+    .patrons_card {
+        margin: 50px 0px 0px 25px;
+    }
+
+    .patrons_img {
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        width:80vw;
+    }
+}
