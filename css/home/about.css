@@ -123,4 +123,8 @@
     flex-direction: column;
     gap:30px;
   }
+
+  .about .content .title{
+    text-align: left;
+  }
 }
