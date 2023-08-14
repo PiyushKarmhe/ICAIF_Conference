@@ -23,7 +23,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  /* flex-wrap: wrap; */
   gap:20px;
   min-height: 100vh;
 }
@@ -69,7 +68,7 @@
   line-height: 30px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .sec-gap h1 {
     font-size: 1.5rem;
     line-height: 30px;
