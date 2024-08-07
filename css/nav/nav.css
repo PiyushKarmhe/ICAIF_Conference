@@ -2,16 +2,19 @@
 
 header {
     position: sticky;
-    top: 10px;
+    top: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    z-index: 9;
+    z-index: 100;
     height: min-content;
     width: 100vw;
     font-family: "DM Sans", sans-serif;
     font-weight: 500;
+
+    gap:15px;
+    padding:0 10px;
 }
 
 .nav {
