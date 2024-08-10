@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Cabin:wght@600;700&family=Kanit:wght@400;500;600;700&family=Noto+Serif+Vithkuqi:wght@600&family=Roboto+Condensed:wght@400;700&family=Ruwudu:wght@600&family=Ubuntu:wght@500&family=Work+Sans:wght@100;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Cabin:wght@600;700&family=Crimson+Text:wght@600&family=EB+Garamond&family=Exo+2:wght@600&family=Josefin+Sans:wght@600&family=Kanit:wght@400;500;600;700&family=Noto+Serif+Vithkuqi:wght@600&family=Roboto+Condensed:wght@400;700&family=Ruwudu:wght@600&family=Ubuntu:wght@500&family=Work+Sans:wght@100;600&display=swap');
 
-.sec-gap{
+.sec-gap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,39 +23,41 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  gap:20px;
+  gap: 20px;
   min-height: 100vh;
 }
 
-.about .image{
-  display: flex;
+.about .image {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.about .image img{
-  width:auto;
-  height:300px;
+.about .image img {
+  width: auto;
+  height: 300px;
+  border-radius: 10px;
 }
 
-.about .content{
+.about .content {
   text-align: justify;
   display: flex;
   flex-direction: column;
-  gap:30px;
+  gap: 30px;
+  height: min-content;
 }
 
-.about .content .title{
+.about .content .title {
   font-family: 'Work Sans', sans-serif;
   font-size: 2.8rem;
   letter-spacing: 1px;
   line-height: 40px;
-  color: whitesmoke;
+  color: white;
 }
-.about .content .title span{
-  color:#FF3A33;
+
+.about .content .title span {
+  color: #FF3A33;
   font-family: 'Work Sans', sans-serif;
   font-size: 2.8rem;
 }
@@ -63,9 +65,65 @@
 
 .about .content p {
   font-family: 'Raleway', sans-serif;
-  color: rgb(174, 167, 167);
+  color: whitesmoke;
   font-size: 1.4rem;
   line-height: 30px;
+}
+
+.about .content ul {
+  font-family: 'Raleway', sans-serif;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  line-height: 30px;
+  padding-left: 30px;
+  position: relative;
+  bottom: 20px;
+}
+
+.about .content table {
+  font-family: 'Raleway', sans-serif;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  line-height: 30px;
+}
+
+.about .content table tr td,
+.about .content table tr th {
+  text-align: left;
+  vertical-align: top;
+}
+
+.about .sideScroll {
+  max-height: 70vh;
+  overflow-y: scroll;
+  min-width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  position: relative;
+
+  padding: 10px;
+}
+
+.about .sideScroll .scrollItem .scrollTitle {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 25px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.about .sideScroll .scrollItem ul {
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 25px;
+  color: white;
+  padding-left: 30px;
+  text-wrap: wrap;
 }
 
 @media (max-width: 900px) {
@@ -78,31 +136,31 @@
     flex-wrap: wrap;
   }
 
-  .about-rev{
+  .about-rev {
     flex-wrap: wrap-reverse;
   }
 
-  .about .image{
+  .about .image {
     width: fit-content;
     height: fit-content;
     border-radius: 20px;
     overflow: hidden;
   }
 
-  .about .image img{
-    width:auto;
-    height:80vw;
-  }  
+  .about .image img {
+    width: auto;
+    height: 80vw;
+  }
 
-  .about .content{
+  .about .content {
     text-align: justify;
     font-size: 1.5rem;
     letter-spacing: 4px;
     line-height: 40px;
-  
+
     display: flex;
     flex-direction: column;
-    gap:30px;
+    gap: 30px;
   }
 
 }
@@ -113,18 +171,18 @@
     line-height: 30px;
   }
 
-  .about .content{
+  .about .content {
     text-align: justify;
     font-size: 1.5rem;
     letter-spacing: 2.5px;
     line-height: 35px;
-  
+
     display: flex;
     flex-direction: column;
-    gap:30px;
+    gap: 30px;
   }
 
-  .about .content .title{
+  .about .content .title {
     text-align: left;
   }
 }
