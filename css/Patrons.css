@@ -49,6 +49,7 @@
 .patrons_img {
     border-radius: 10px;
     margin-bottom: 1rem;
+    filter: invert(100%);
 }
 
 

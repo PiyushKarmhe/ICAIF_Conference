@@ -29,7 +29,6 @@
 
 .about .image {
   display: flex;
-  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -46,6 +45,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  height: min-content;
 }
 
 .about .content .title {
@@ -68,6 +68,62 @@
   color: whitesmoke;
   font-size: 1.4rem;
   line-height: 30px;
+}
+
+.about .content ul {
+  font-family: 'Raleway', sans-serif;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  line-height: 30px;
+  padding-left: 30px;
+  position: relative;
+  bottom: 20px;
+}
+
+.about .content table {
+  font-family: 'Raleway', sans-serif;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  line-height: 30px;
+}
+
+.about .content table tr td,
+.about .content table tr th {
+  text-align: left;
+  vertical-align: top;
+}
+
+.about .sideScroll {
+  max-height: 70vh;
+  overflow-y: scroll;
+  min-width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  position: relative;
+
+  padding: 10px;
+}
+
+.about .sideScroll .scrollItem .scrollTitle {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 25px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.about .sideScroll .scrollItem ul {
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 25px;
+  color: white;
+  padding-left: 30px;
+  text-wrap: wrap;
 }
 
 @media (max-width: 900px) {

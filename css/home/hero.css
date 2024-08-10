@@ -140,7 +140,7 @@ body {
 .hero-banner__title2 {
   font-family: 'Ruwudu', serif;
   font-family: 'Work Sans', sans-serif;
-  color: #fff;
+  color: white;
   font-size: 1.3rem;
   font-weight: 100;
   padding: 0 20px;
@@ -149,6 +149,7 @@ body {
   text-transform: uppercase;
   top: 8rem;
   letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.85); /* Add text shadow here */
 }
 
 .hero-banner__stroked-title {
@@ -161,12 +162,22 @@ body {
   border-radius: 20px;
   position: fixed;
   transform: rotate(-15deg);
-  width: 450px;
+  width: 550px;
   transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
 section.hero {
   top: 0px;
+  height: 100vh;
+  width: 100vw;
+
+  background-image: url("../../assets/images/forest-good.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: fixed;
+  z-index: -10;
 }
 
 .scroll-down {
