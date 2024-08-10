@@ -27,7 +27,7 @@ window.addEventListener("load", function () {
       AOS.init({
         duration: 1200,
       }); //AOS animations
-    }, 5000); // 5000 milliseconds = 5 seconds
+    }, 3000); // 5000 milliseconds = 5 seconds
   }
 });
 // Loader End
