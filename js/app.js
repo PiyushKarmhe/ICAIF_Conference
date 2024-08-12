@@ -1,10 +1,10 @@
-// // TEMP
-// let loadingElement = document.querySelector(".loader");
-// loadingElement.style.display = "none";
+// TEMP
+let loadingElement = document.querySelector(".loader");
+loadingElement.style.display = "none";
 
-// AOS.init({
-//   duration: 1200,
-// }); //AOS animations
+AOS.init({
+  duration: 1200,
+}); //AOS animations
 
 //Scroll Control
 function disableScroll() {
@@ -16,20 +16,20 @@ function enableScroll() {
 }
 
 // Loader
-window.addEventListener("load", function () {
-  let loadingElement = document.querySelector(".loader");
-  disableScroll();
+// window.addEventListener("load", function () {
+//   let loadingElement = document.querySelector(".loader");
+//   disableScroll();
 
-  if (loadingElement) {
-    setTimeout(function () {
-      loadingElement.style.display = "none";
-      enableScroll();
-      AOS.init({
-        duration: 1200,
-      }); //AOS animations
-    }, 3000); // 5000 milliseconds = 5 seconds
-  }
-});
+//   if (loadingElement) {
+//     setTimeout(function () {
+//       loadingElement.style.display = "none";
+//       enableScroll();
+//       AOS.init({
+//         duration: 1200,
+//       }); //AOS animations
+//     }, 3000); // 5000 milliseconds = 5 seconds
+//   }
+// });
 // Loader End
 
 // Astronaut Scroll Animation

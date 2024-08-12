@@ -266,6 +266,7 @@ main {
   align-items: center;
   gap: 20px;
   height: fit-content;
+  padding-top: 145px;
 }
 
 .sec-gap {
@@ -341,6 +342,8 @@ main {
 
   main {
     padding: 20px;
+
+    padding-top: 120px;
   }
 
 }
