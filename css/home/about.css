@@ -24,7 +24,11 @@
   align-items: center;
   justify-content: space-evenly;
   gap: 20px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+}
+
+.about-vertical {
+  flex-direction: column;
 }
 
 .about .image {
@@ -85,6 +89,9 @@
   color: whitesmoke;
   font-size: 1.1rem;
   line-height: 30px;
+
+  width: 60vw;
+  margin: 0 auto;
 }
 
 .about .content table tr td,
@@ -116,6 +123,44 @@
 }
 
 .about .sideScroll .scrollItem ul {
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 25px;
+  color: white;
+  padding-left: 30px;
+  text-wrap: wrap;
+}
+
+.about .cardHolder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:50px;
+
+  justify-content: space-evenly;
+
+  padding: 10px;
+  width:100%;
+
+  margin-top: 80px;
+}
+
+.about .cardHolder .cardItem {
+  width: 45%;
+}
+
+.about .cardHolder .cardItem .cardTitle {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 25px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.about .cardHolder .cardItem ul {
   /* font-family: 'Raleway', sans-serif; */
   font-family: 'Work Sans', sans-serif;
   font-size: 1.4rem;
@@ -163,6 +208,9 @@
     gap: 30px;
   }
 
+  .about .content table {  
+    width: 100%;
+  }
 }
 
 @media (max-width: 428px) {
@@ -184,5 +232,9 @@
 
   .about .content .title {
     text-align: left;
+  }
+
+  .about .cardHolder .cardItem {
+    width: 100%;
   }
 }
