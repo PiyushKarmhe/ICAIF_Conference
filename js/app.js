@@ -126,6 +126,6 @@ function easeInOutCubic(t, b, c, d) {
   return (c / 2) * ((t - 2) * t * t + 2) + b;
 }
 
-window.addEventListener('beforeunload', () => {
+window.addEventListener("beforeunload", () => {
   window.scrollTo(0, 0);
 });

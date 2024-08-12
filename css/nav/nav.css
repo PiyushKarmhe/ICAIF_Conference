@@ -13,8 +13,8 @@ header {
     font-family: "DM Sans", sans-serif;
     font-weight: 500;
 
-    gap:15px;
-    padding:0 10px;
+    gap: 15px;
+    padding: 0 10px;
 }
 
 .nav {
@@ -145,13 +145,20 @@ header {
     width: 30vw;
     padding: 10px;
     padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-con-mob {
     display: none;
 }
 
-@media (max-width: 900px) {
+.logo-con-mob-vit {
+    display: none;
+}
+
+/* @media (max-width: 900px) {
     header {
         flex-wrap: wrap;
     }
@@ -177,17 +184,157 @@ header {
         z-index: 1;
         border-radius: 8px 8px 0 0;
     }
-}
+} */
 
-@media (max-width: 428px) {
+@media (max-width: 1024px) {
     header {
-        width: 100vw;
+        width: 90vw;
         height: auto;
         align-self: center;
         justify-content: space-between;
 
+        padding: 20px;
+        flex-wrap: nowrap;
+
+        margin: 10px;
+        border-radius: 50px;
+        background: rgba(0, 0, 0, 0.09);
+        backdrop-filter: saturate(100%) blur(4.2px);
+        -webkit-backdrop-filter: saturate(180%) blur(4.2px);
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav {
+        overflow: hidden;
+        /* margin: 10px 15px; */
+        margin: 5px;
+        width: 7.5vh;
+        height: 7.5vh;
+        border-radius: 7.5vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 0 0 40px rgba(190, 152, 152, 0.9);
+
+        cursor: pointer;
+        padding: 0 1.75rem;
+
+        gap: 5px;
+    }
+
+    .nav-item,
+    .nav-indicator {
+        display: none;
+    }
+
+    .nav svg {
+        display: block;
+        height: 2.75rem;
+        width: auto;
+        fill: azure
+    }
+
+    .nav svg path {
+        fill: azure;
+    }
+
+    .nav .mobile-menu-logo {
+        display: block;
+        height: 7.5vh;
+        width: auto;
+    }
+
+    .nav:focus .mobile-menu-logo {
+        margin-bottom: 30px;
+    }
+
+    header:focus {
+        height: 30vh;
+    }
+
+    .nav:focus {
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav:focus .nav-item {
+        font-size: 1.3rem;
+        display: block;
+        min-width: 30vw;
+        padding: 10px;
+        background-color: azure;
+        border-radius: 5px;
+        margin-left: 250px;
+        
+        box-shadow: 0 0 40px rgba(190, 152, 152, 0.9);
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .dropdown-act {
+        position: relative;
+        font-size: 1.3rem;
+        min-width: 35vw;
+        min-height: fit-content;
+        padding: 10px;
+        background-color: azure;
+        border-radius: 5px;
+        margin-left: 310px;
+        box-shadow: 0 0 40px rgba(190, 152, 152, 0.9);
+        top: 0px;
+    }
+
+    .logo-con {
+        display: none;
+    }
+
+    .logo-con-mob {
+        display: flex;
+        width: 15vw;
+    }
+
+    .logo-con-mob-vit {
+        display: flex;
+        width: 15vw;
+        padding: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-con-mob img {
+        width: auto;
+        height: 7.5vh;
+    }
+
+    .logo-con-mob-vit img {
+        width: auto;
+        height: 7.5vh;
+    }
+}
+
+@media (max-width: 428px) {
+    header {
+        width: 95vw;
+        height: auto;
+        align-self: center;
+        justify-content: space-around;
+
         padding: 10px;
         flex-wrap: nowrap;
+
+        left: 50%;
+        transform: translateX(-52%);
     }
 
     .nav {
@@ -208,7 +355,7 @@ header {
         cursor: pointer;
         padding: 0 1.75rem;
 
-        gap:5px;
+        gap: 5px;
     }
 
     .nav-item,
@@ -233,6 +380,10 @@ header {
         width: auto;
     }
 
+    .nav:focus .mobile-menu-logo {
+        margin-bottom: 20px;
+    }
+
     header:focus {
         height: 30vh;
     }
@@ -253,7 +404,7 @@ header {
         padding: 10px;
         background-color: azure;
         border-radius: 5px;
-        margin-left: 120px;
+        margin-left: 50px;
 
         box-shadow: 0 0 40px rgba(190, 152, 152, 0.9);
     }
@@ -282,12 +433,25 @@ header {
     .logo-con-mob {
         display: flex;
         width: 15vw;
-        padding: 5px;
-        /* padding-left:30px; */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-con-mob-vit {
+        display: flex;
+        width: 15vw;
+        padding: 0px;
+        align-items: center;
+        justify-content: center;
     }
 
     .logo-con-mob img {
         width: 15vw;
+        height: auto;
+    }
+
+    .logo-con-mob-vit img {
+        width: 35vw;
         height: auto;
     }
 }
