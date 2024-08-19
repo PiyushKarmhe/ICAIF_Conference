@@ -258,7 +258,7 @@ main {
   position: relative;
   background-color: transparent;
   z-index: 10;
-  color: white;
+  color: black;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -267,6 +267,13 @@ main {
   gap: 20px;
   height: fit-content;
   padding-top: 145px;
+
+  background-color: whitesmoke;
+}
+
+.heroMain{
+  padding-top: 0px;
+  padding: 50px;
 }
 
 .sec-gap {
@@ -278,13 +285,13 @@ main {
   width: 90vw;
   min-width: 90%;
   position: relative;
-  background: rgba(0, 0, 0, 0.09);
+  /* background: rgba(0, 0, 0, 0.09); */
   border-radius: 16px;
-  backdrop-filter: saturate(100%) blur(4.2px);
-  -webkit-backdrop-filter: saturate(100%) blur(4.2px);
+  /* backdrop-filter: saturate(100%) blur(4.2px);
+  -webkit-backdrop-filter: saturate(100%) blur(4.2px); */
   padding: 30px;
-  outline: 15px solid hsla(194.1, 92.5%, 20.8%, 0.06);
-  outline-offset: -7.5px;
+  /* outline: 15px solid hsla(194.1, 92.5%, 20.8%, 0.06); */
+  /* outline-offset: -7.5px; */
   overflow-x: hidden;
 }
 

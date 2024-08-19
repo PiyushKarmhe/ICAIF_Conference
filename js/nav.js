@@ -10,14 +10,14 @@ function handleIndicator(el,index) {
     item.removeAttribute("style");
   });
 
-  indicator.style.width = `${(el.offsetWidth-6)}px`;
-  indicator.style.left = `${el.offsetLeft-(6*(index/4))}px`;
-  console.log("Width : ",el.offsetWidth,indicator.style.width);
-  console.log("Left : ",el.offsetLeft,indicator.style.left);
-  indicator.style.backgroundColor = el.getAttribute("active-color");
+  // indicator.style.width = `${(el.offsetWidth-6)}px`;
+  // indicator.style.left = `${el.offsetLeft-(6*(index/4))}px`;
+  // console.log("Width : ",el.offsetWidth,indicator.style.width);
+  // console.log("Left : ",el.offsetLeft,indicator.style.left);
+  // indicator.style.backgroundColor = el.getAttribute("active-color");
 
   el.classList.add("is-active");
-  el.style.color = el.getAttribute("active-color");
+  // el.style.color = el.getAttribute("active-color");
 }
 
 items.forEach((item, index) => {

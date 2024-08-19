@@ -2,7 +2,7 @@
 
 header {
     position: fixed;
-    top: 5px;
+    top: 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,16 +15,19 @@ header {
 
     gap: 15px;
     padding: 0 10px;
+
+    background-color: white;
+    /* box-shadow: 0 0 40px rgba(0, 0, 0, 0.9); */
 }
 
 .nav {
     display: inline-flex;
     position: relative;
     max-width: 100%;
-    background-color: #171616;
+    background-color: white;
     padding: 0 20px;
-    border-radius: 40px;
-    box-shadow: 0 10px 40px rgba(98, 59, 59, 0.8);
+    /* border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(98, 59, 59, 0.8); */
 
     z-index: 9;
     /* width: 33vw; */
@@ -39,13 +42,16 @@ header {
 }
 
 .nav-item {
-    color: #83818c;
+    /* color: #83818c; */
+    color: black;
     padding: 20px;
     text-decoration: none;
     transition: 0.3s;
     margin: 0 6px;
     z-index: 1;
     position: relative;
+
+    font-size: 1.05rem;
 }
 
 .nav-item:before {
@@ -55,7 +61,7 @@ header {
     left: 0;
     width: 100%;
     height: 5px;
-    background-color: azure;
+    background-color: #171616;
     border-radius: 8px 8px 0 0;
     opacity: 0;
     transition: 0.3s;
@@ -109,18 +115,20 @@ header {
 }
 
 .dropdown-item:hover {
-    background-color: #171616;
-    color: azure;
-    border-radius: 10px;
+    /* background-color: #171616; */
+    /* color: azure; */
+    color: rgb(17, 165, 223);
+    /* border-radius: 10px; */
 }
 
-.nav-item:not(.is-active):hover:before {
+/* .nav-item:not(.is-active):hover:before {
     opacity: 1;
     bottom: 0;
-}
+} */
 
 .nav-item:not(.is-active):hover {
-    color: #c79999;
+    /* color: #c79999; */
+    color: rgb(17, 165, 223);
 }
 
 .nav-indicator {
@@ -150,12 +158,28 @@ header {
     justify-content: center;
 }
 
+.logo-con img {
+    filter: invert(100%);
+}
+
 .logo-con-mob {
     display: none;
 }
 
 .logo-con-mob-vit {
     display: none;
+}
+
+.logo-con-mob img {
+    filter: invert(100%);
+}
+
+.logo-con-mob-vit img {
+    filter: invert(100%);
+}
+
+.is-active {
+    color: rgb(17, 165, 223);
 }
 
 /* @media (max-width: 900px) {
@@ -198,9 +222,12 @@ header {
 
         margin: 10px;
         border-radius: 50px;
-        background: rgba(0, 0, 0, 0.09);
+
+        /* background: rgba(0, 0, 0, 0.09);
         backdrop-filter: saturate(100%) blur(4.2px);
-        -webkit-backdrop-filter: saturate(180%) blur(4.2px);
+        -webkit-backdrop-filter: saturate(180%) blur(4.2px); */
+
+        background-color: white;
 
         left: 50%;
         transform: translateX(-50%);
