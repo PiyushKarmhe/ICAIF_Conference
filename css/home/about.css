@@ -25,10 +25,14 @@
   height: fit-content;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: space-evenly;
-  gap: 20px;
+  gap: 30px;
   /* min-height: 100vh; */
+}
+
+.about-rev {
+  align-items: center !important;
 }
 
 .about-vertical {
@@ -45,14 +49,20 @@
 .about .image img {
   width: auto;
   height: 300px;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+.about .image .img1 {
+  width: auto;
+  height: 600px !important;
+  border-radius: 5px;
 }
 
 .about .content {
   text-align: justify;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
   height: min-content;
 }
 
@@ -65,11 +75,13 @@
   font-size: 2.8rem;
   letter-spacing: 1px;
   line-height: 40px;
-  color: black;
+  color: #00051b;
+
+  margin-bottom: 20px;
 }
 
 .about .content .title span {
-  color: #03ab3e;
+  /* color: #03ab3e; */
   /* font-family: 'Work Sans', sans-serif; */
   font-family: "Gupter", serif;
   /* font-family: "Roboto Condensed", sans-serif; */
@@ -84,8 +96,8 @@
   /* font-family: "Roboto", sans-serif; */
   font-family: "Nunito Sans", sans-serif;
 
-  color: #757677;
-  font-size: 1.35rem;
+  color: #6d6e70;
+  font-size: 1.1rem;
   line-height: 30px;
 }
 
@@ -102,13 +114,13 @@
 }
 
 .about .content ul {
-  font-family: 'Raleway', sans-serif;
-  color: black;
-  font-size: 1.2rem;
+  font-family: "Nunito Sans", sans-serif;
+  color: #6d6e70;
+  font-size: 1rem;
   line-height: 30px;
   padding-left: 30px;
   position: relative;
-  bottom: 20px;
+  bottom: 10px;
 }
 
 .about .content table {
@@ -222,8 +234,8 @@
   }
 
   .about .image img {
-    width: auto;
-    height: 80vw;
+    height: auto;
+    width: 80vw;
   }
 
   .about .content {
