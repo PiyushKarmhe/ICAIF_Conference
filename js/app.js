@@ -21,13 +21,13 @@ window.addEventListener("load", function () {
   disableScroll();
 
   if (loadingElement) {
-    setTimeout(function () {
+    // setTimeout(function () {
       loadingElement.style.display = "none";
       enableScroll();
       AOS.init({
         duration: 1200,
       }); //AOS animations
-    }, 3000); // 5000 milliseconds = 5 seconds
+    // }, 3000); // 5000 milliseconds = 5 seconds
   }
 });
 // Loader End
