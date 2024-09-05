@@ -81,19 +81,12 @@
 }
 
 .about .content .title span {
-  /* color: #03ab3e; */
-  /* font-family: 'Work Sans', sans-serif; */
   font-family: "Gupter", serif;
-  /* font-family: "Roboto Condensed", sans-serif; */
-  /* font-family: "Roboto", sans-serif; */
 
   /* font-size: 2.8rem; */
 }
 
 .about .content p {
-  /* font-family: 'Raleway', sans-serif; */
-  /* font-family: "Roboto Condensed", sans-serif; */
-  /* font-family: "Roboto", sans-serif; */
   font-family: "Nunito Sans", sans-serif;
 
   color: #6d6e70;
@@ -124,8 +117,8 @@
 }
 
 .about .content table {
-  font-family: 'Raleway', sans-serif;
-  color: #757677;
+  font-family: "Nunito Sans", sans-serif;
+  color: #6d6e70;
   font-size: 1.1rem;
   line-height: 30px;
 
@@ -137,6 +130,13 @@
 .about .content table tr th {
   text-align: left;
   vertical-align: top;
+}
+
+.about .content table tr th {
+  font-family: "Gupter", serif;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  font-weight: 800;
 }
 
 .about .sideScroll {
@@ -162,7 +162,6 @@
 }
 
 .about .sideScroll .scrollItem ul {
-  /* font-family: 'Raleway', sans-serif; */
   font-family: 'Work Sans', sans-serif;
   font-size: 1.4rem;
   letter-spacing: 2px;
@@ -176,14 +175,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap:50px;
+  gap: 50px;
 
   justify-content: space-evenly;
 
   padding: 10px;
-  width:100%;
+  width: 100%;
 
-  margin-top: 80px;
+  margin-top: 10px;
 }
 
 .about .cardHolder .cardItem {
@@ -191,22 +190,20 @@
 }
 
 .about .cardHolder .cardItem .cardTitle {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 2px;
+  font-family: "Gupter", serif;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
   line-height: 25px;
-  color: #757677;
+  color: #00051b;
   margin-bottom: 20px;
 }
 
 .about .cardHolder .cardItem ul {
-  font-family: 'Raleway', sans-serif;
-  /* font-family: 'Work Sans', sans-serif; */
-  font-size: 1.3rem;
-  /* font-weight: 400; */
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.1rem;
   letter-spacing: 2px;
   line-height: 25px;
-  color: #757677;
+  color: #6d6e70;
   padding-left: 30px;
   text-wrap: wrap;
 }
@@ -249,7 +246,7 @@
     gap: 30px;
   }
 
-  .about .content table {  
+  .about .content table {
     width: 100%;
   }
 

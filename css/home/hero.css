@@ -272,7 +272,7 @@ main {
   align-items: center;
   gap: 20px;
   height: fit-content;
-  padding-top: 145px;
+  padding-top: 22.5vh;
 
   background-color: whitesmoke;
 }
@@ -357,6 +357,10 @@ main {
     padding: 20px;
 
     padding-top: 120px;
+  }
+
+  .hero-banner__title2 {
+    bottom: 0rem;
   }
 
 }

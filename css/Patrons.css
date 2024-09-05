@@ -34,21 +34,88 @@
     z-index: 1;
     color: black;
     text-align: center;
-    gap:50px;
+    gap: 50px;
+    width: 100%;
+}
+
+.patrons_card_sm {
+    margin: 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 1;
+    color: black;
+    text-align: center;
+    gap: 10px;
     width: 100%;
 }
 
 .card {
     margin-bottom: 4rem;
-    font-family: 'Ruwudu', serif;
+    /* font-family: 'Ruwudu', serif; */
+    font-family: 'IBM Plex Sans', sans-serif;
+
     font-size: 1.5rem;
     width: 30%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+
+    color: #6d6e70;
+}
+
+.smCard {
+    margin-bottom: 4rem;
+    /* font-family: 'Ruwudu', serif; */
+    font-family: 'IBM Plex Sans', sans-serif;
+
+    font-size: 1.1rem;
+    width: 20%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+
+    color: #595a5c;
+}
+
+.card .img {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.smCard .smImg {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 0.9rem;
+    border-radius: 10px;
 }
 
 .patrons_img {
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    height: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.smCard .smImg img {
+    height: 100%;
     width: auto;
 }
 
@@ -60,6 +127,10 @@
     .card {
         width: 45%;
     }
+
+    .smCard {
+        width: 25%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -67,14 +138,29 @@
         margin: 50px 0px 0px 0px;
     }
 
-    .patrons_img {
+    .card .img {
         border-radius: 10px;
         margin-bottom: 1rem;
-        width:80vw;
-        height: auto;
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .smCard .smImg {
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        width: 80vw;
+        height: 80vw;
     }
 
     .card {
         width: 100%;
+    }
+
+    .smCard {
+        width: 100%;
+    }
+
+    .patrons_card_sm {
+        gap: 0px;
     }
 }
